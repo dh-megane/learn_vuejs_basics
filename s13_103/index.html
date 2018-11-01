@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js App</title>
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+	<div id="title">キー修飾子</div>
+	<div id="app">
+    <div>
+      keydown.13
+      <input v-on:keydown.13="handler">
+    </div>
+    <div>
+      keydown.enter
+      <input v-on:keydown.enter="handler($event, 'keydown.enter')">
+    </div>
+    <div>
+      keydown.tab
+      <input v-on:keydown.tab="handler($event, 'keydown.tab')">
+    </div>
+    <div>
+      いずれかの矢印キー
+      <input v-on:keydown.up.down.left.right="handler($event, 'keydown.tab')">
+    </div>
+    <div>
+      <button v-on:click.shift="handler($event, 'button')">Shiftキーを押しながらクリックしてね</button>
+    </div>
+	</div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
