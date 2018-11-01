@@ -6,8 +6,8 @@ new Vue({
   methods: {
     handleInput: function (event) {
       // 代入前に何か処理を行う…
-      // this.message = event.target.value
-      this.message = `${event.target.value}は天才`
+      this.message = event.target.value
+      // this.message = `${event.target.value}は天才`
     }
   }
 })
